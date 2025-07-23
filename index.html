@@ -1,0 +1,31 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>DISA Production Record</title> <link rel="stylesheet" href="style.css" />
+ </head> <body> <script> if (localStorage.getItem("loggedIn") !== "true") { window.location.href = "login.html"; } </script> <div class="container">
+  <h1>DISA Production Record Update</h1> <p id="userInfo"></p> <form id="recordForm"> <label>Operator Name</label> <input type="text" name="operator" placeholder="Operator Name or ID" required />
+
+<label>Machine ID</label>
+<input type="text" name="machine" placeholder="Machine ID" required />
+
+<label>Shift</label>
+<select name="shift" required>
+  <option value="">Select Shift</option>
+  <option value="Morning">Morning</option>
+  <option value="Evening">Evening</option>
+  <option value="Night">Night</option>
+</select>
+
+<label>Date</label>
+<input type="date" name="date" id="dateField" required />
+
+<label>Output Count</label>
+<input type="number" name="output" placeholder="Output Count" required />
+
+<label>Remarks</label>
+<input type="text" name="remarks" placeholder="Remarks" />
+
+<div class="button-row">
+  <button type="submit">Submit</button>
+  <button type="button" id="exportBtn">Export</button>
+  <button type="button" id="logoutBtn">Logout</button>
+</div>
+</form> <h2>Submitted Records</h2> <table id="recordTable"> <thead> <tr> <th>Operator</th> <th>Machine</th> <th>Shift</th> <th>Date</th> <th>Output</th> <th>Remarks</th> </tr> </thead> <tbody></tbody> </table> </div> <script src="script.js"></script> 
+</body> </html>

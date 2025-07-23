@@ -1,0 +1,148 @@
+body {
+font-family: 'lato', sans-serif;
+background: url('https://plus.unsplash.com/premium_photo-1668473367234-fe8a1decd456?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+background-size: cover;
+margin: 0;
+padding: 20px;
+}
+
+.container {
+max-width: 700px;
+margin: auto;
+background: rgba(255,255,255,0.95);
+padding: 30px;
+border-radius: 20px;
+box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.small-width {
+margin-top: 100px;
+border-radius: 30px;
+max-width: 330px;
+}
+#userInfo {
+font-weight: bold;
+font-size: 22px;
+color: #a617a6; /* Optional: gives a dark blue shade */
+text-align: center;
+margin-bottom: 15px;
+}
+h1, h2 {
+text-align: center;
+color: #0b3d91;
+text-shadow: 1px 1px 2px #ccc;
+font-weight: bold;
+}
+
+form label {
+margin-top: 10px;
+display: block;
+font-weight: bold;
+color: #4a148c;
+font-size: 20px;
+}
+
+input, select {
+width: 98%;
+padding: 12px;
+margin: 6px 0 15px 0;
+border: 1px solid #888;
+border-radius: 6px;
+font-size: 15px;
+background: #f1f8e9;
+}
+
+input:focus, select:focus {
+border-color: #673ab7;
+outline: none;
+background: #ffffff;
+}
+
+.button-row {
+display: flex;
+gap: 10px;
+margin-top: 15px;
+}
+
+button {
+padding: 10px 30px;
+font-size: 18px;
+font-weight: bold;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+transition: background 0.3s, transform 0.3s;
+}
+
+/* Submit Button */
+.button-row button:nth-child(1) {
+background: linear-gradient(45deg, #4CAF50, #81C784);
+color: white;
+}
+.button-row button:nth-child(1):hover {
+background: linear-gradient(45deg, #388E3C, #66BB6A);
+transform: scale(1.05);
+}
+
+/* Export Button */
+.button-row button:nth-child(2) {
+background: linear-gradient(45deg, #2196F3, #64B5F6);
+color: white;
+}
+.button-row button:nth-child(2):hover {
+background: linear-gradient(45deg, #1976D2, #42A5F5);
+transform: scale(1.05);
+}
+
+/* Logout Button */
+.button-row button:nth-child(3) {
+background: linear-gradient(45deg, #f44336, #e57373);
+color: white;
+}
+.button-row button:nth-child(3):hover {
+background: linear-gradient(45deg, #d32f2f, #ef5350);
+transform: scale(1.05);
+}
+
+/* Login Button */
+#loginBtn {
+width: 100%;
+padding: 14px;
+background: linear-gradient(45deg, #FF9800, #FFB74D);
+color: white;
+border: none;
+border-radius: 6px;
+font-weight: bold;
+}
+#loginBtn:hover {
+background: linear-gradient(45deg, #F57C00, #FF9800);
+transform: scale(1.05);
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 30px;
+}
+
+th, td {
+border: 1px solid #ddd;
+padding: 10px;
+text-align: center;
+font-size: 15px;
+}
+
+th {
+background-color: #007bff;
+color: white;
+}
+
+#loginError {
+color: red;
+font-weight: bold;
+margin-top: 10px;
+}
+.container h1 {
+border-bottom: 2px solid #ccc;
+padding-bottom: 10px;
+}

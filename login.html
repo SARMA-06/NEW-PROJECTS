@@ -1,0 +1,14 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>Login - DISA Record</title> <link rel="stylesheet" href="style.css" /> </head> <body> <div class="container small-width"> <h1>Login to DISA Record</h1>
+<form id="loginForm">
+  <label>Username</label>
+  <input type="text" id="username" placeholder="Enter username" required />
+
+  <label>Password</label>
+  <input type="password" id="password" placeholder="Enter password" required />
+
+  <button type="submit" id="loginBtn">Login</button>
+</form>
+
+<p id="loginError"></p>
+</div> <script> const users = [ { username: "sarma", password: "admin", role: "Admin Sarma " }, { username: "yogesh", password: "059", role: "Operator 1 Yogii" }, { username: "iniyan", password: "014", role: "Operator 2 Ini" }, { username: "karuppu", password: "020", role: "Operator 3 Black" } ]; document.getElementById("loginForm").addEventListener("submit", function (e) { e.preventDefault(); const userInput = document.getElementById("username").value.trim(); const passInput = document.getElementById("password").value.trim(); const matchedUser = users.find(u => u.username === userInput && u.password === passInput); if (matchedUser) { alert(`Welcome ${matchedUser.role}`); localStorage.setItem("loggedIn", "true"); localStorage.setItem("userRole", matchedUser.role); window.location.href = "index.html"; } else { document.getElementById("loginError").innerText = "Invalid Username or Password"; } }); 
+</script> </body> </html>
